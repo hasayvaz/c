@@ -1,0 +1,27 @@
+#!/usr/bin/sh
+
+kulfonk()
+{
+	echo " "
+	echo "Kullanim: <komut> <arguman>"
+	echo " "
+	echo "ls       => Dosya ve dizinleri görüntülemek için kullanilir"
+	echo "hesapla  => Verdiginiz 2 argumanla 4 islem(4,-,/,*) hesabini yapar"
+	echo "help     => Yardim menüsünü gösterir"
+	echo " "
+	echo "Komutlar hakkinda detayli bilgi almak için numaralarini yaziniz :"
+	echo "ls için '1', hesapla için '2', help için '3' yaziniz."
+	echo "Kullanimi: bash programadi numara"
+	echo " "
+	exit 1
+}
+
+if [ $# -eq 0 ]; then 
+	kulfonk
+elif [ $1 -eq 1 ]; then
+	echo "hesapla => Kullanim: ./hesapla arguman1 operator(+,-,/,*)"
+elif [ $1 -eq 2 ]; then
+	echo "ls => Kullanim: ls <dosya yada dizin adi>"
+elif [ $1 -eq 3 ]; then
+	echo "help => help <yardim istenen komut adi>"
+fi
